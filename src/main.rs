@@ -16,8 +16,8 @@ use lettre_email::EmailBuilder;
 fn main() -> std::io::Result<()> {
     dotenv().ok();
     let port = env::var("PORT").unwrap();
-    println!("Now listening on localhost:{}", port);
-    rouille::start_server(format!("localhost:{}", port), move |request| {
+    println!("Now listening on 0.0.0.0:{}", port);
+    rouille::start_server(format!("0.0.0.0:{}", port), move |request| {
         rouille::log(&request, io::stdout(), || {
             router!(request,
                 (GET) (/) => {
