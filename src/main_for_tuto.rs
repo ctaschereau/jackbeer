@@ -18,10 +18,4 @@ fn main() {
     let result = guess.trim().parse::<i32>().unwrap() == secret_number;
 
     println!("You guessed: {}, which is {}", guess, result);
-
-    // https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#generating-a-secret-number
-
-    // send email
-    // https://gist.github.com/gyng/5d60225d55928ab4cf55309c88b25ecf
-    // https://github.com/lettre/lettre
 }
