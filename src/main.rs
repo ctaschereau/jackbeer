@@ -25,6 +25,11 @@ fn main() -> std::io::Result<()> {
                     rouille::Response::from_file("text/html", file)
                 },
 
+                (GET) (/style) => {
+                    let file = File::open("./src/resource/style.css").unwrap();
+                    rouille::Response::from_file("text/css", file)
+                },
+
                 (POST) (/submit) => {
                     let data = try_or_400!(post_input!(request, {
                         beer_date: String,

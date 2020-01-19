@@ -3,37 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jack beer</title>
+	<link rel="stylesheet" href="/style" media="all">
 </head>
 <body>
-<h1>Setup pour aller prendre une bière</h1>
-<p>Salut Jack, je pense qu'on est rendu à aller prendre une bière ensemble.</p>
-<form action="/submit" method="post">
-	<p><label for="beer_date">Quand serais-tu disponible (le jeudi c'est toujours une bonne journée btw)?</label></p>
-	<p><input id="beer_date" name="beer_date" type="date" /></p>
-	<p>
-		<label for="gauchitude">
-			Sur une échelle de 1 à 10, à combien vas-tu essayer de cacher le fait que tu es gaucher lorsque nous serons en public? :P
+<div class="form-style-2">
+	<div class="form-style-2-heading">Setup pour aller prendre une bière 🍺</div>
+	<div class="form-style-2-sub-heading">Salut Jack, je pense qu'on est pas mal rendu à aller prendre une bière ensemble 🍻</div>
+	<form action="/submit" method="post">
+
+		<label for="beer_date">
+			<span>Quand serais-tu disponible (le jeudi c'est toujours une bonne journée btw)? <span class="required">*</span></span><br>
+			<input type="date" class="input-field" name="beer_date" id="beer_date" required />
 		</label>
-	</p>
-	<p>
-		<select id="gauchitude" name="gauchitude">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-		</select>
-	</p>
-	<p><label for="other_guest">Nom d'un(e) convive bonus pour la soirée (optionnel) : </label></p>
-	<p><input id="other_guest" name="other_guest" type="text" /></p>
-	<p><label for="comments">Commentaires (autre que pour mon design vraiment tendance) :</label></p>
-	<p><textarea id="comments" name="comments" rows="5" cols="30"></textarea></p>
-	<input id="submit" name="submit" type="submit">
-</form>
+
+		<label for="gauchitude">
+			<span>Sur une échelle de 1 à 10, à combien vas-tu essayer de cacher le fait que tu es gaucher lorsque nous serons en public? :P</span><br>
+			<select id="gauchitude" name="gauchitude" class="select-field">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</label>
+
+		<label for="other_guest">
+			<span>Nom d'un(e) convive bonus pour la soirée (optionnel) : </span><br>
+			<input type="text" class="input-field" name="other_guest" id="other_guest" />
+		</label>
+
+		<label for="comments">
+			<span>Commentaires</span><br>
+			<textarea name="comments" id="comments" class="textarea-field"></textarea>
+		</label>
+
+		<input type="submit" id="submit" name="submit" value="Soumettre" />
+	</form>
+</div>
 </body>
 </html>
